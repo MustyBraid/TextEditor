@@ -26,8 +26,6 @@ export default class {
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
       console.info("Loaded data from IndexedDB, injecting into editor");
-      //TODO: remove this log once it works
-      console.log("death approaches");
       this.editor.setValue(data || localData || header);
     });
 
